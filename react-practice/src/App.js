@@ -1,11 +1,11 @@
 import React from "react";
-import CompA from './Component/CompA'
+import Task  from "./Task";
 
 function App(){
     return <div>
-        <h1>Props DrillingEx</h1>
+        <h1>Task</h1>
         <hr/>
-        <CompA/>
+        <Task/>
     </div>
 }
 export default App
