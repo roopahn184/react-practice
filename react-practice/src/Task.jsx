@@ -6,10 +6,10 @@ class Task extends  Component{
         name:"Iphone12s",Qty:1,price:45000
     }
     incrHandler = ()=>{
-        this.setState({qty:this.state.Qty + 1})
+        this.setState({Qty:this.state.Qty + 1})
     }
     decrHandler = ()=>{
-        this.setState({qty:this.state.Qty - 1})
+        this.setState({Qty:this.state.Qty - 1})
     }
     render(){
         return <div className="container">
