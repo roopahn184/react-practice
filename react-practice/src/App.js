@@ -1,17 +1,12 @@
 import React from 'react'
-import Message from './Message/Message'
-import Message1 from './Message/Message1'
-import Employee from './employees/Employee'
-
-function App(){
-    return <>
-    <h1>binding</h1>
-    <hr />
-    <Message/>
-    <hr />
-    <Message1/>
-    <hr />
-    <Employee/>
-    </>
+import '../src/App.css';
+import Header from './Components/Header'
+const App = () => {
+  return (
+    <div>
+        <Header/>
+        </div>
+  )
 }
+
 export default App
