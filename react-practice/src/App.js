@@ -1,11 +1,17 @@
-import React from "react";
-import Task  from "./Task";
+import React from 'react'
+import Message from './Message/Message'
+import Message1 from './Message/Message1'
+import Employee from './employees/Employee'
 
 function App(){
-    return <div>
-        <h1>Task</h1>
-        <hr/>
-        <Task/>
-    </div>
+    return <>
+    <h1>binding</h1>
+    <hr />
+    <Message/>
+    <hr />
+    <Message1/>
+    <hr />
+    <Employee/>
+    </>
 }
 export default App

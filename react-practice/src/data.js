@@ -1,0 +1,22 @@
+let data = [{"id":1,"name":"Martie","email":"mlowen0@desdev.cn","gender":"Male"},
+{"id":2,"name":"Odelinda","email":"oryley1@house.gov","gender":"Female"},
+{"id":3,"name":"Sonya","email":"soaker2@java.com","gender":"Female"},
+{"id":4,"name":"Brant","email":"brasp3@usgs.gov","gender":"Male"},
+{"id":5,"name":"Ernie","email":"eburgot4@rediff.com","gender":"Male"},
+{"id":6,"name":"Frederique","email":"fdonnelly5@usnews.com","gender":"Female"},
+{"id":7,"name":"Jackson","email":"jmattessen6@ucla.edu","gender":"Male"},
+{"id":8,"name":"Torry","email":"tseedman7@unicef.org","gender":"Male"},
+{"id":9,"name":"Lydia","email":"lgullane8@moonfruit.com","gender":"Female"},
+{"id":10,"name":"Jeremy","email":"jhaistwell9@hostgator.com","gender":"Male"},
+{"id":11,"name":"Itch","email":"imitchenera@dell.com","gender":"Male"},
+{"id":12,"name":"Godwin","email":"gpendrichb@nydailynews.com","gender":"Male"},
+{"id":13,"name":"Maggy","email":"mgianninic@slashdot.org","gender":"Female"},
+{"id":14,"name":"Cameron","email":"cbirkind@free.fr","gender":"Male"},
+{"id":15,"name":"Henry","email":"hhaxleye@dedecms.com","gender":"Male"},
+{"id":16,"name":"Win","email":"wlabellf@nba.com","gender":"Male"},
+{"id":17,"name":"Lu","email":"leveringtong@amazon.com","gender":"Female"},
+{"id":18,"name":"Tammy","email":"tgiraudouh@tamu.edu","gender":"Female"},
+{"id":19,"name":"Granny","email":"gbrugmanni@nba.com","gender":"Agender"},
+{"id":20,"name":"Damon","email":"dwauchopej@prnewswire.com","gender":"Male"}]
+
+export default data
