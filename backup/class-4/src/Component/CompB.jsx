@@ -1,5 +1,5 @@
 import React from "react";
-import Compc from './CompC';
+import Compc from '../Component/CompC';
 
 class CompB extends React.Component{
     render(){

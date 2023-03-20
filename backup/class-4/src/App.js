@@ -1,5 +1,5 @@
 import React from "react";
-import CompA from './Component/CompA'
+import CompA from '../src/Component/CompA'
 
 function App(){
     return <div>

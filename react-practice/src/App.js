@@ -1,12 +1,9 @@
-import React from 'react'
-import '../src/App.css';
-import Header from './Components/Header'
-const App = () => {
-  return (
-    <div>
-        <Header/>
-        </div>
-  )
+import React from "react";
+import Login from './FormHandling/Login'
+function App(){
+    return <>
+    <hr/>
+    <Login/>
+    </>
 }
-
 export default App
