@@ -8,14 +8,14 @@ class Login extends React.Component{
             password :""
          }
     }
-    emailHandler =()=>{
+    emailHandler =(Event)=>{
         console.log(Event.target.value);
-        this.setState({Email:Event.target.value})
+        this.setState({email:Event.target.value})
     }
-    passwordHandler =()=>{
+    passwordHandler =(Event)=>{
         this.setState({password:Event.target.value})
     }
-    submitHandler=()=>{
+    submitHandler=(Event)=>{
         Event.preventDefault();
         console.log(this.state);
     }
