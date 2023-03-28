@@ -1,6 +1,6 @@
 import React from "react";
 
-class Message extends React.Component{
+className Message extends React.Component{
     state ={
         msg:"Hello"
     }

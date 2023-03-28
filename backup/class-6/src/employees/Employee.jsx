@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import data from '../data'
- class Employee extends Component {
+ className Employee extends Component {
     constructor(props){
         super(props)
         this.state= {

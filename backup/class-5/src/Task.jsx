@@ -1,7 +1,7 @@
 
 import React,{Component} from "react";
 
-class Task extends  Component{
+className Task extends  Component{
     state = {
         name:"Iphone12s",Qty:1,price:45000
     }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class Message1 extends Component {
+export className Message1 extends Component {
     constructor(props){
         super(props)
         console.log("first constructor");
