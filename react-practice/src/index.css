@@ -4,3 +4,16 @@
 .Navbar-style{
     background-color: darkgreen;
 }
+
+.Green-highlight{
+  color: blue;
+  font-size: 40px;
+}
+.red-highlight{
+  color: blueviolet;
+  font-size: 40px;
+}
+.pink-highlight{
+  color: green;
+  font-size: 40px;
+}
