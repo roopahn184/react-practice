@@ -1,3 +1,4 @@
+import { all } from 'axios';
 import React, { Component } from 'react';
 import Product from "./Product";
 
@@ -18,13 +19,47 @@ export class ShoppingCart extends Component {
     return (
       <div className='container-fluid'>
         <h4>ShoppingCart</h4>
-        <div>
+        <div className="row">
           {this.state.products.map((prod)=>{
-               return <Product key={prod.id} product={prod}/>
-          })}  
+               return <Product key={prod.id} product={prod}
+               onIncrement={this.handleIncrement}
+               onDecrement={this.handleDecrement}
+               onDelete={this.handleDelete}>
+                <button className='btn btn-success'>Buy Now</button>
+               </Product>
+          })} 
+          </div>
+          <div> 
         </div>
         </div>
     )
+  }
+  handleIncrement=(product)=>{
+    console.log("handleincrement",product);
+    let allProducts =[...this.state.products];
+    let index=allProducts.indexOf(product);
+    console.log(allProducts[index]);
+    allProducts[index].quantity++;
+    this.setState({products:allProducts});
+
+  }
+  handleDecrement=(product)=>{
+    console.log("handledecrement",product);
+    let allProducts=[...this.state.products];
+    let index=allProducts.indexOf(product);
+    allProducts[index].quantity--;
+    this.setState({product:allProducts})
+
+  }
+  handleDelete=(product)=>{
+    let allProducts=[...this.state.products];
+    let index=allProducts.indexOf(product);
+    if(window.confirm("are you sure to delete")){
+
+   
+    allProducts.splice(index,1);
+    this.setState({products:allProducts})
+  }
   }
 }
 

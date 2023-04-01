@@ -17,3 +17,8 @@
   color: green;
   font-size: 40px;
 }
+.hand-icon{
+  cursor: pointer;
+  margin-left: 550px;
+  color: blue;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar';
-import ShoppingCart from './ShoppingCart';
+import Login from './Login';
 
  class App extends Component {
   render() {
@@ -8,8 +8,7 @@ import ShoppingCart from './ShoppingCart';
       <div>
         <Navbar/>
         <hr/>
-
-      <ShoppingCart/>
+        <Login/>
       </div>
     )
   }
