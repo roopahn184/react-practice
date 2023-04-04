@@ -5,14 +5,14 @@ import {BrowserRouter as Router, Route,Routes} from 'react-router-dom'
  class App extends Component {
   render() {
     return (
-      <div>
+      <BrowserRouter>
         <Router>
             <Navbar/>
             <Routes>
                 <Route Path="/user" element={<UserApp/>} />
             </Routes>
         </Router>
-      </div>
+        </BrowserRouter>
     )
   }
 }

@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 
  class Product extends Component {
-    state={
-        product:this.props.product
-    }
+   constructor(props){
+    super(props)
+    this.state={
+      product:this.props.product
+  };
+   }
+  
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
         <div className="col-lg-6">
       <div className='card m-2'>
@@ -26,8 +30,8 @@ import React, { Component } from 'react'
         <div className="float-left">
           <span className='Badge'>{this.state.product.quantity}</span>
           <div className="btn-group">
-            <button className='btn btn-outline-success' onClick={()=>{this.props.onIncrement(this.state.product)}}>+</button>
-            <button className='btn btn-outline-success' onClick={()=>{this.props.onDecrement(this.state.product)}}>-</button>
+            <button className='btn btn-outline-success' onClick={()=>{this.props.onIncrement(this.state.product, 10)}}>+</button>
+            <button className='btn btn-outline-success' onClick={()=>{this.props.onDecrement(this.state.product, 0)}}>-</button>
           </div>
         </div>
         <div className="float-right">

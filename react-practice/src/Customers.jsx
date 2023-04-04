@@ -8,7 +8,7 @@ import React, { Component } from 'react'
    };
   render() {
     this.state = {
-      pageTitle:"Customers",customersCount:7,
+      pageTitle:"Customers",customersCount:5,
       customers:[
         {id:1,name:"scott",
         phone:"123456",
@@ -28,9 +28,7 @@ import React, { Component } from 'react'
         {id:5,name:"john",phone:null,adress:{city:"new delhi"},photo:"https://picsum.photos/id/1014/60"}
       ]
     };
-     this.onRefreshClick = ()=>{  
-      this.setState({customersCount:7,});
-     };
+     
     return (
       <div>
         <h4 className='border-bottom m-1 p-1'>{this.state.pageTitle}
@@ -44,9 +42,9 @@ import React, { Component } from 'react'
           <tr>
             <th>#</th>
             <th>photo</th>
-            <th>customers Name</th>
-            <th>phone</th>
-            <th>city</th>
+            <th>Customer Name</th>
+            <th>Phone</th>
+            <th>City</th>
           </tr>
           </thead>
           <tbody>
@@ -56,6 +54,9 @@ import React, { Component } from 'react'
       </div>
     );
   }
+  onRefreshClick = ()=>{  
+    this.setState({customersCount:7});
+   };
   onChangePicture=(cust, index)=>{
     console.log(cust);
   }
@@ -64,7 +65,7 @@ import React, { Component } from 'react'
       return phone;
     }
     else{
-     return <div className='bg-warning text-center'>no phone</div>
+     return <div className='bg-warning p-2 text-center'>No phone</div>
     }
   };
   
@@ -73,8 +74,11 @@ import React, { Component } from 'react'
       return(
         <tr key={cust.id}>
           <td>{cust.id}</td>
-          <td><img src={cust.photo} alt="customers" />
-          <button className='btn btn-sm btn-secondary' onClick={this.onChangePictureClick(cust, index)}>change picture</button></td>
+          <td><img src={cust.photo} alt="customer" />
+          <div>
+          <button className='btn btn-sm btn-secondary' onClick={this.onChangePictureClick(cust, index)}>change picture</button>
+          </div>
+          </td>
           <td className={this.customerNameStyle(cust.name)}>{cust.name}</td>
           <td>{this.getPhoneToRender(cust.phone)}</td>
           <td>{cust.adress.city}</td>
@@ -85,7 +89,7 @@ import React, { Component } from 'react'
 
   };
   onChangePictureClick=(cust, index)=>{
-    console.log(cust);
+    // console.log(cust);
     var custArr = this.state.customers;
     custArr[index].photo="https://picsum.photos/id/1018/60";
     this.setState({customers:custArr})

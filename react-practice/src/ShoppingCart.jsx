@@ -1,9 +1,10 @@
-import { all } from 'axios';
+
 import React, { Component } from 'react';
 import Product from "./Product";
 
-export class ShoppingCart extends Component {
-    state ={
+class ShoppingCart extends Component {
+    
+  state ={
         products:[
             {id:1,productName:"iPhone",price:89000,quantity:0},
             {id:2,productName:"samsung",price:45000,quantity:0},
@@ -17,11 +18,13 @@ export class ShoppingCart extends Component {
     }
   render() {
     return (
-      <div className='container-fluid'>
-        <h4>ShoppingCart</h4>
+      <div>
+        <h4>Shopping Cart</h4>
         <div className="row">
           {this.state.products.map((prod)=>{
-               return <Product key={prod.id} product={prod}
+               return <Product 
+               key={prod.id} 
+               product={prod}
                onIncrement={this.handleIncrement}
                onDecrement={this.handleDecrement}
                onDelete={this.handleDelete}>
@@ -32,35 +35,94 @@ export class ShoppingCart extends Component {
           <div> 
         </div>
         </div>
-    )
+      );
   }
-  handleIncrement=(product)=>{
-    console.log("handleincrement",product);
-    let allProducts =[...this.state.products];
-    let index=allProducts.indexOf(product);
-    console.log(allProducts[index]);
-    allProducts[index].quantity++;
-    this.setState({products:allProducts});
+  componentDidMount = async () => {
+    //send request to server
+    var response = await fetch("http://localhost:5000/products", {
+      method: "GET",
+    });
 
-  }
-  handleDecrement=(product)=>{
-    console.log("handledecrement",product);
-    let allProducts=[...this.state.products];
-    let index=allProducts.indexOf(product);
-    allProducts[index].quantity--;
-    this.setState({product:allProducts})
+    //the following code executes after receiving response from server
+    //converting the response body into a JS object array
+    var prods = await response.json();
 
-  }
-  handleDelete=(product)=>{
-    let allProducts=[...this.state.products];
-    let index=allProducts.indexOf(product);
-    if(window.confirm("are you sure to delete")){
+    //the following code executes after converting response body into JS object array
+    console.log(prods);
 
-   
-    allProducts.splice(index,1);
-    this.setState({products:allProducts})
+    //updating products into component's state
+    this.setState({ products: prods });
+
+    //console.log("componentDidMount - ShoppingCart");
+  };
+
+  componentDidUpdate(prevProps, prevState) {
+    /*console.log(
+      "componentDidUpdate - ShoppingCart",
+      prevProps,
+      prevState,
+      this.props,
+      this.state
+    );*/
+    // if (prevProps.x != this.props.x) {
+    //   //make http call
+    // }
   }
+
+  //Executes when the current instance of current component is being deleted from memory
+  componentWillUnmount() {
+    //console.log("componentWillUnmount - ShoppingCart");
   }
+
+  componentDidCatch(error, info) {
+    //console.log("componentDidCatch - ShoppingCart");
+    //console.log(error, info);
+
+    localStorage.lastError = `${error}\n${JSON.stringify(info)}`;
+  }
+
+  //executes when the user clicks on + button.
+  handleIncrement = (product, maxValue) => {
+    //get index of selected product
+    let allProducts = [...this.state.products];
+    let index = allProducts.indexOf(product);
+
+    if (allProducts[index].quantity < maxValue) {
+      allProducts[index].quantity++;
+
+      //update the state of current component (parent component)
+      this.setState({ products: allProducts });
+    }
+  };
+
+  //executes when the user clicks on - button.
+  handleDecrement = (product, minValue) => {
+    //get index of selected product
+    let allProducts = [...this.state.products];
+    let index = allProducts.indexOf(product);
+
+    if (allProducts[index].quantity > minValue) {
+      allProducts[index].quantity--;
+
+      //update the state of current component (parent component)
+      this.setState({ products: allProducts });
+    }
+  };
+
+  //executes when the user clicks on Delete (X) button in the Product component.
+  handleDelete = (product) => {
+    //get index of selected product
+    let allProducts = [...this.state.products];
+    let index = allProducts.indexOf(product);
+
+    if (window.confirm("Are you sure to delete?")) {
+      //delete product based on index
+      allProducts.splice(index, 1);
+
+      //update the state of current component (parent component)
+      this.setState({ products: allProducts });
+    }
+  };
 }
 
 export default ShoppingCart

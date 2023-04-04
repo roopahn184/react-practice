@@ -7,8 +7,10 @@ import React, { Component } from 'react';
     }
   render() {
     return (
-    <div className="col-9">
-        <h4 className='m-1 p-2 border-bottom'>Login</h4>
+    <div className='container'>
+        <div className="row">
+            <div className="col-md-5">
+            <h4 className='m-1 p-2 border-bottom'>Login</h4>
         <div className='form-group form-row'>
             <label className='col-4'>Email:</label>
             <input type="text" className='form-control' value={this.state.email} onChange={(Event)=>{
@@ -26,6 +28,9 @@ import React, { Component } from 'react';
         {this.state.message}
             <button className='btn btn-primary m-1'onClick={this.onLoginclick}>Login</button>
         </div>
+            </div>
+        </div>
+       
         
     </div>)
   }
