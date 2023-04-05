@@ -3,11 +3,11 @@ let initialState ={
 }
 let MessageReducer =(state=initialState,action)=>{
     switch(action.type){
-       case 'hii':
+       case 'gm':
         return {
             msg:"have a nice day"
         }
-        case 'hlo':
+        case 'gn':
             return{msg:"have a good day"}
             default:
                 return state
