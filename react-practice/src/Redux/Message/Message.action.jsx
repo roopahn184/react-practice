@@ -1,7 +1,7 @@
 let gm ="gm"
 let gn ="gn"
 let gmAction = ()=>{
- return {type: gm}
+ return {type:gm}
 }
  
 let gnAction = ()=>{

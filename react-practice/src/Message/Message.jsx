@@ -4,7 +4,7 @@ import { gmAction,gnAction } from '../Redux/Message/Message.action';
 
 const Message = () => {
   let Message = useSelector((state)=>{
-    return state
+    return state;
   })
     let Dispatch = useDispatch()
     let gmHandler =()=>{

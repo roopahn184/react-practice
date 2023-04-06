@@ -10,7 +10,7 @@ let MessageReducer =(state=initialState,action)=>{
         case 'gn':
             return{msg:"have a good day"}
             default:
-                return state
+                return state;
     }
 }
 export {MessageReducer}
