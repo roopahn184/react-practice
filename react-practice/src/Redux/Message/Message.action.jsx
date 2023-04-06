@@ -1,10 +1,12 @@
-let gm ="gm"
-let gn ="gn"
-let gmAction = ()=>{
- return {type:gm}
+
+let GM = "GM"
+let GN = "GN"
+let gmAction = () => {
+  console.log("Test Case - gmAction")
+    return { type: GM }
 }
- 
-let gnAction = ()=>{
-  return {type:gn}
+
+let gnAction = () => {
+    return { type: GN }
 }
-export{ gmAction, gnAction, gm, gn }
+export { gmAction, gnAction, GM, GN }
