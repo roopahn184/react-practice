@@ -1,5 +1,5 @@
 import React from "react";
-className  Footer extends React.Component{
+class  Footer extends React.Component{
     render(){
         return <div>
             <h3>footer component</h3>
