@@ -21,7 +21,7 @@ function Form (){
     }
 
     return(
-        <form onSubmit={handleSubmit} className="Form-handling">
+        <form onSubmit={handleSubmit} className="Form-container">
             <label>Name:</label>
             <input type="text" name="name" value={formData.name} onChange={handleInputChange} /><br />
             <label>Email:</label>
