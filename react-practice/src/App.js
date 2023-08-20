@@ -3,6 +3,7 @@ import React from 'react';
 import Form from './component/Form';
 import HandlingProps from './component/HandlingProps';
 import HandlingState from './component/HandlingState';
+import UpdateState from './component/UpdateState';
 
 
  function App (){
@@ -12,6 +13,7 @@ import HandlingState from './component/HandlingState';
         <Form/>
         <HandlingProps name="vivek" rollNumber ="23" />
         <HandlingState />
+        <UpdateState />
       </div>
     )
  }export default App
