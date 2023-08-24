@@ -4,6 +4,8 @@ import Form from './component/Form';
 import HandlingProps from './component/HandlingProps';
 import HandlingState from './component/HandlingState';
 import UpdateState from './component/UpdateState';
+import FetchApi from './component/FetchApi';
+import Counter  from './component/Counter';
 
 
  function App (){
@@ -14,6 +16,8 @@ import UpdateState from './component/UpdateState';
         <HandlingProps name="vivek" rollNumber ="23" />
         <HandlingState />
         <UpdateState />
+        <FetchApi />
+        <Counter />
       </div>
     )
  }export default App
