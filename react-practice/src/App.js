@@ -7,6 +7,7 @@ import React from 'react';
 // import FetchApi from './component/FetchApi';
 // import Counter  from './component/Counter';
 import Todo from './component/Todo';
+import Appone from './component/contact-form/Appone'
 
 
  function App (){
@@ -20,6 +21,7 @@ import Todo from './component/Todo';
         <FetchApi />
         <Counter /> */}
         <Todo />
+        <Appone/>
       </div>
     )
  }export default App
