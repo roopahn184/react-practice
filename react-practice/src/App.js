@@ -6,8 +6,10 @@ import React from 'react';
 // import UpdateState from './component/UpdateState';
 // import FetchApi from './component/FetchApi';
 // import Counter  from './component/Counter';
-import Todo from './component/Todo';
-import Appone from './component/contact-form/Appone'
+// import Todo from './component/Todo';
+// import Appone from './component/contact-form/Appone';
+import LifecycleExample from './component/LifecycleExample';
+import FuncLifecycle from './component/FuncLifecycle'
 
 
  function App (){
@@ -20,8 +22,10 @@ import Appone from './component/contact-form/Appone'
         <UpdateState />
         <FetchApi />
         <Counter /> */}
-        <Todo />
-        <Appone/>
+        {/* <Todo /> */}
+        {/* <Appone/> */}
+        <LifecycleExample/>
+        <FuncLifecycle/>
       </div>
     )
  }export default App
