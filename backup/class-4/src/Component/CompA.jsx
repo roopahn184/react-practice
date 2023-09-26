@@ -1,7 +1,7 @@
 import React from "react";
 import CompB from './CompB';
 
-className CompA extends React.Component{
+class CompA extends React.Component{
     ename="Roopa"
     render(){
         return <div>

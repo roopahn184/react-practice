@@ -9,7 +9,8 @@ import React from 'react';
 // import Todo from './component/Todo';
 // import Appone from './component/contact-form/Appone';
 import LifecycleExample from './component/LifecycleExample';
-import FuncLifecycle from './component/FuncLifecycle'
+import FuncLifecycle from './component/FuncLifecycle';
+import CompA from './component/PropsDrilling/CompA';
 
 
  function App (){
@@ -26,6 +27,7 @@ import FuncLifecycle from './component/FuncLifecycle'
         {/* <Appone/> */}
         <LifecycleExample/>
         <FuncLifecycle/>
+        <CompA />
       </div>
     )
  }export default App

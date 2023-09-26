@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 function Api(){
-    const [user, setusers] = useState([])
+    const [user, setusexrs] = useState([])
    useEffect(()=>{
     Axios.get("https://jsonplaceholder.typicode.com/todos")
     .then((res)=>{

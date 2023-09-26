@@ -1,6 +1,6 @@
 import React from "react";
 
-className CompD extends React.Component{
+class CompD extends React.Component{
     render(){
         return <div>
             <h2>Component D</h2> 
